@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <title> Calculation of two no.</title>
+    </head>
+    <body>
+        Enter first number : <br>
+          <input type = "text" id="n1"/><br>
+        Enter second number : <br>
+          <input type = "text" id="n2"/><br>
+          <button onclick="add()">Add </button> <br>
+          <button onclick="sub()">Sub </button> <br>
+          <button onclick="multiply()">Multiply </button> <br>
+           Result : <br>
+           <input type = "text" id="n3"/><br>
+    </body>
+    <script>
+        function add()
+        {
+            var a,b,c;
+            a=Number(document.getElementById("n1").value);
+            b=Number(document.getElementById("n2").value);
+            c=a+b;
+            document.getElementById("n3").value=c;
+        }
+         function sub()
+          {
+              var x,y,z;
+              x=Number(document.getElementById("n1").value);
+              y=Number(document.getElementById("n2").value);
+              z=x-y;
+              document.getElementById("n3").value = z;
+
+          }
+          function multiply()
+          {
+              var p,q,r;
+              p=Number(document.getElementById("n1").value);
+              q=Number(document.getElementById("n2").value);
+              r=p*q;
+              document.getElementById("n3").value=r;
+          }
+    </script>
+
+
+
+
+
+
+
+
+
+</html>
+
