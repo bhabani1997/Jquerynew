@@ -1,22 +1,39 @@
 <html>
     <head>
         <title>Bhabani</title>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     </head>
+    <script>
+        $(document).ready(function(){
+            $ ("button").click(function(){
+                $("p").hide();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+        $ ("button").click(function(){
+            $(".jq").hide();
+        });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#jqe").hide();
+            });
+        });
+    </script>
     <body>
-        <h1>Serialization (C#)</h1>
-        <p style="color: blue">
-            Serialization is the process <br>
-            of converting an object into a stream <br>
-            of bytes to store the object or transmit it<br>
-             to <b>memory</b>, a <i>database</i>, or a file. Its main <br>
-             purpose is to save the state of an object in <br>
-             order to be able to recreate it when needed. <br>
-             The reverse process is called deserialization.<br>
-            </p>
-<a href="https://www.football.com">This is a link</a>
-        
-        <h2>
-            How serialization works
-        </h2>
+        <p> I can't handle so much pressure.</p>
+        <h1>I try my level best. </h1>
+        <p> Failure is the pillar of success.</p>
+        <p class="jq"> I learn jquery. </p>
+        <p id="jqe"> I am doing it very slowly.  </p>
+        <button> click here</button>
     </body>
 </html>

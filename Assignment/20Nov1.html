@@ -1,0 +1,59 @@
+<html>
+    <head>
+             <title>INDIA VS AUSTRALIA</title>
+              <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+             <script type="text/javascript">
+
+            $(document).ready(function()
+            {        
+              var Data='{"team1":[{"name":"Virat Kohli","isCaptain": true,"Batsman": true,"Bowler": false,"Allrounder": false},{"name": "Lokesh Rahul","isCaptain": false,"Batsman": true,"Bowler": false,"Allrounder": false},{"name": "Rishav Pant","isCaptain": false,"Batsman": true,"Bowler": false,"Allrounder": false},{"name": "Hardik Pandya","isCaptain": false,"Batsman": true,"Bowler": true,"Allrounder": true},{"name": "Bhubaneswar Kumar","isCaptain": false,"Batsman": false,"Bowler": true,"Allrounder": false}],"team2":[{"name": "Aaron Finch","isCaptain": true,"Batsman": true,"Bowler": false,"Allrounder": false},{"name": "Travis Head","isCaptain": false,"Batsman": true,"Bowler": false,"Allrounder": false},{"name": "Glenn Maxwell","isCaptain": false,"Batsman":true,"Bowler": true,"Allrounder":true},{"name": "Mitchell Stark","isCaptain":false,"Batsman": false,"Bowler": true,"Allrounder":false},{"name":"Andrew Tye","isCaptain": false,"Batsman":false,"Bowler":true,"Allrounder":false}]}';
+              var myData=JSON.parse(Data);
+               var table1="<table border = 2><caption>Team 1</caption><th>Name</th><th>isCaptain</th><th>Batsman</th><th>Bowler</th><th>Allrounder</th>"
+           $.each(myData.team1,function(key, value)
+                    {
+                        table1+='<tr>';
+                        table1+='<td>'+value.name+'</td>'
+                        table1+='<td>'+value.isCaptain+'</td>';
+                        table1+='<td>'+value.Batsman+'</td>';
+                        table1+='<td>'+value.Bowler+'</td>';
+                        table1+='<td>'+value.Allrounder+'</td></tr>';
+                    }
+                    );          
+
+                     table1+="</table>";
+                     $("#details").append(table1);
+
+            var table2="<table border = 2><caption>Team 2</caption><th>Name</th><th>isCaptain</th><th>Batsman</th><th>Bowler</th><th>Allrounder</th>"
+
+            $.each(myData.team2,function(key, value)
+            {
+                        table2+='<tr>'
+                        table2+='<td>'+value.name+'</td>';
+                        table2+='<td>'+value.isCaptain+'</td>';
+                        table2+='<td>'+value.Batsman+'</td>';
+                        table2+='<td>'+value.Bowler+'</td>';
+                        table2+='<td>'+value.Allrounder+'</td></tr>';
+                    }
+
+         );
+                       table2+="</table>"
+                       $("#details").append(table2);
+
+
+  } ); 
+
+    </script>
+       </head>
+                  <body>
+                        <h1>Match Details:</h1>
+                        <div id="details"></div>
+                </body>
+</html>
+
+            
+
+            
+
+    
+
+    
